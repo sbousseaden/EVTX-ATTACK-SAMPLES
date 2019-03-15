@@ -11,4 +11,4 @@ Can be useful for:
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
-2. BloodHound\SharpHound (with default scan options) traces on target DC
+2. BloodHoundAD\SharpHound (with default scan options) traces on one target host
