@@ -15,7 +15,7 @@ Can be useful for:
 
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
-2. PsExec traces on target host 
+2. PsExec traces on target host - 5145 - (psexec -r "renamed psexec service name")  
 
 ## Defense Evasion:
 1. RDP Tunneling via SSH - 4624 - Logon Type 10 and Source IP eq to loopback IP address
