@@ -12,3 +12,10 @@ Can be useful for:
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
 2. BloodHoundAD\SharpHound (with default scan options) traces on one target host
+
+## Lateral Movement:
+1. RemCom (open source psexec) traces on target host eventid 5145
+2. PsExec traces on target host 
+
+## Persistence:
+1. 
