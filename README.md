@@ -14,7 +14,7 @@ Can be useful for:
 2. BloodHoundAD\SharpHound (with default scan options) traces on one target host
 
 ## Credential Access:
-1. Memory dump of lsass.exe (can be other processes) using procdump.exe and taskmgr.exe (sysmon 10 & 11)
+1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
 
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
