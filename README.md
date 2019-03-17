@@ -5,7 +5,7 @@ Can be useful for:
 
 - Testing your detection scripts based on EVTX parsing
 
-- Training on detection and threat hunting using event logs
+- Training on DFIR and threat hunting using event logs
 
 - Designing detection use cases using Windows and Sysmon event logs
 
