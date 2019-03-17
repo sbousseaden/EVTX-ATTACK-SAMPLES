@@ -1,13 +1,13 @@
 # Windows EVTX Samples:
 
-This is a container for windows events samples associated to specific attack techniques. 
+This is a container for windows events samples associated to specific attack and post-exploitation techniques. 
 Can be useful for:
 
 - Testing your detection scripts based on EVTX parsing
 
 - Training on detection and threat hunting using event logs
 
-- Designing detection use cases
+- Designing detection use cases using Windows and Sysmon event logs
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
@@ -15,10 +15,12 @@ Can be useful for:
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
+2. Mimikatz sekurlsa::logonpasswords (sysmon 10)
 
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
-2. PsExec traces on target host - 5145 - (psexec -r "renamed psexec service name")  
+2. PsExec traces on target host - 5145 - (psexec -r "renamed psexec service name")
+3. New Share object created - 5142 (net share print=c:\windows\system32 grant:...)
 
 ## Defense Evasion:
 1. RDP Tunneling via SSH - eventid 4624 - Logon Type 10 and Source IP eq to loopback IP address
