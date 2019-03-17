@@ -13,6 +13,9 @@ Can be useful for:
 1. PsLoggedOn.exe traces on the destination host
 2. BloodHoundAD\SharpHound (with default scan options) traces on one target host
 
+## Credential Access:
+1. Memory dump of lsass.exe (can be other processes) using procdump.exe and taskmgr.exe (sysmon 10 & 11)
+
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
 2. PsExec traces on target host - 5145 - (psexec -r "renamed psexec service name")  
