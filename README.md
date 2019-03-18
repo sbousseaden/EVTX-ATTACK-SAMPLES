@@ -33,6 +33,7 @@ Can be useful for:
 7. RPC over TCP/IP - 4648 with AI attribute pointing to RPCSS SPN - source machine
 8. Remote File Write/Copy - 5145 [Accesses: WriteData (or AddFile)]
 9. Remote Scheduled Task Creation via ATSVC named pipe - 5145 (ShareName:IPC$, RTN: atsvc) on target host
+10.Remote Service Creation - 5145 (IPC$, svcctl, WriteData), 7045 (SystemEvent with svc details) - both from target host
 
 ## Defense Evasion:
 1. RDP Tunneling via SSH - eventid 4624 - Logon Type 10 and Source IP eq to loopback IP address
