@@ -9,6 +9,10 @@ Can be useful for:
 
 - Designing detection use cases using Windows and Sysmon event logs
 
+## Execution:
+1. Short time living scheduled task (4698 followed by 4699 in less than 1 min time window)
+
+
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
 2. BloodHoundAD\SharpHound (with default scan options) traces on one target host
