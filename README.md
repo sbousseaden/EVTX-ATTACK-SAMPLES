@@ -23,6 +23,8 @@ Can be useful for:
 2. PsExec traces on target host - 5145 - (psexec -r "renamed psexec service name")
 3. New Share object created - 5142 (net share print=c:\windows\system32 grant:...)
 4. Pass the hash using Mimikatz's sekurlsa::pth - 4624 from source machine (logon type=9, logonproc=seclogon)
+5. WMI - 4648 with AI attribute pointing to WMIC process
+6. RPC over TCP/IP - 4648 with AI attribute pointing to RPCSS SPN 
 
 ## Defense Evasion:
 1. RDP Tunneling via SSH - eventid 4624 - Logon Type 10 and Source IP eq to loopback IP address
