@@ -25,6 +25,7 @@ Can be useful for:
 4. Pass the hash using Mimikatz's sekurlsa::pth - 4624 from source machine (logon type=9, logonproc=seclogon)
 5. WMI - 4648 with AI attribute pointing to WMIC process
 6. RPC over TCP/IP - 4648 with AI attribute pointing to RPCSS SPN 
+7. Remote File Write/Copy - 5145 [Accesses: WriteData (or AddFile)]
 
 ## Defense Evasion:
 1. RDP Tunneling via SSH - eventid 4624 - Logon Type 10 and Source IP eq to loopback IP address
