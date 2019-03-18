@@ -28,6 +28,7 @@ Can be useful for:
 6. WMI - 4624 (logon type =3) followed by 2x 4688 (wmiprvse.exe -> calc.exe) - target machine 
 7. RPC over TCP/IP - 4648 with AI attribute pointing to RPCSS SPN - source machine
 8. Remote File Write/Copy - 5145 [Accesses: WriteData (or AddFile)]
+9. Remote Scheduled Task Creation via ATSVC named pipe - 5145 (ShareName:IPC$, RTN: atsvc) on target host
 
 ## Defense Evasion:
 1. RDP Tunneling via SSH - eventid 4624 - Logon Type 10 and Source IP eq to loopback IP address
