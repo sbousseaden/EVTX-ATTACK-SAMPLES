@@ -17,7 +17,7 @@ Can be useful for:
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
 2. Mimikatz sekurlsa::logonpasswords (sysmon 10)
-3. Traces of a KeyLogger using DirectInput (sysmon 13) - More Info about the technique here https://wikileaks.org/ciav7p1/cms/page_3375220.html
+3. Traces of a KeyLogger using DirectInput (sysmon 13)
 
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
