@@ -19,12 +19,14 @@ Can be useful for:
 
 # Persistence:
 1. Application Shimming: sysmon (1, 13, 11) and windowd native event 500 "Microsoft-Windows-Application-Experience\Program-Telemetry"
+2. Assigning required DCSync AD extended rights to a backdoor regular account (PowerView DACL_DCSync_Right_Powerview_ Add-DomainObjectAcl) - EventIDs 5136 & 4662
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
 2. Mimikatz sekurlsa::logonpasswords (sysmon 10)
 3. Traces of a KeyLogger using DirectInput (sysmon 13)
 4. Browser's saved credentials - 4663 - test conducted for Opera, Chrome and FireFox
+5. Assining "SPN" to regular user account as a prep step for kerberoasting (ACL_ForcePwd_SPNAdd_User_Computer_Accounts)
 
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
