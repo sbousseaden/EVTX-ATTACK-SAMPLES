@@ -24,6 +24,7 @@ Can be useful for:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
 2. Mimikatz sekurlsa::logonpasswords (sysmon 10)
 3. Traces of a KeyLogger using DirectInput (sysmon 13)
+4. Browser's saved credentials - 4663 - test conducted for Opera, Chrome and FireFox
 
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
