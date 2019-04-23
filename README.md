@@ -11,6 +11,7 @@ Can be useful for:
 
 ## Execution:
 1. Short time living scheduled task (4698 followed by 4699 in less than 1 min time window)
+2. Sysmon 1 - wmighost_sysmon_20_21_1.evtx (scrcons.exe)
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
@@ -20,6 +21,7 @@ Can be useful for:
 # Persistence:
 1. Application Shimming: sysmon (1, 13, 11) and windowd native event 500 "Microsoft-Windows-Application-Experience\Program-Telemetry"
 2. Assigning required DCSync AD extended rights to a backdoor regular account (PowerView DACL_DCSync_Right_Powerview_ Add-DomainObjectAcl) - EventIDs 5136 & 4662
+3. WMIGhost malwr, sysmon 20, 21 and 1 (ActiveScriptEventConsumer) - wmighost_sysmon_20_21_1.evtx
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
