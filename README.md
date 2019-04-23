@@ -27,6 +27,7 @@ Can be useful for:
 3. Traces of a KeyLogger using DirectInput (sysmon 13)
 4. Browser's saved credentials - 4663 - test conducted for Opera, Chrome and FireFox
 5. Assining "SPN" to regular user account as a prep step for kerberoasting (ACL_ForcePwd_SPNAdd_User_Computer_Accounts)
+6. BabyShark Mimikatz via PowerShell - sysmon 7 and 10 (babyshark_mimikatz_powershell.evtx)
 
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
