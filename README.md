@@ -50,3 +50,4 @@ Can be useful for:
 4. RDP Tunneling via SSH - eventid 5156 - local port forwarding to/from loopback IP to 3389 rdp port
 5. RDP Service settings's tampering - RDPWrap, UniversalTermsrvPatch, WinFW RDP FW rule and RDP-TCP port
 6. System and Security Log cleared: 104 System, 1102 Security
+7. Time stomping and DLL Side Loading "NvSmartMax.dll" (DE_timestomp_and_dll_sideloading_and_RunPersist.evtx)
