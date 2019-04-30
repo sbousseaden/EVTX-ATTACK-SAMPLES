@@ -12,6 +12,7 @@ Can be useful for:
 ## Execution:
 1. Short time living scheduled task (4698 followed by 4699 in less than 1 min time window)
 2. Sysmon 1 - wmighost_sysmon_20_21_1.evtx (scrcons.exe)
+3. MSI Package Exec - Meterpreter Reverse TCP - Sysmon Exec - Exec_sysmon_meterpreter_reversetcp_msipackage.evtx
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
