@@ -60,3 +60,4 @@ Can be useful for:
 7. Time stomping and DLL Side Loading "NvSmartMax.dll" (DE_timestomp_and_dll_sideloading_and_RunPersist.evtx)
 8. Process Suspended - ProcessAccess with GrantedAccess eq to 0x800 - process_suspend_sysmon_10_ga_800.evtx
 9. Meterpreter Migrate cmd from untrusted process to a trusted one (explorer.exe) - meterpreter_migrate_to_explorer_sysmon_8.evtx
+10. Timestomp MACE attributes - sysmon 2 (filecreatetime) and 11 (file creation) - sysmon_2_11_evasion_timestomp_MACE.evtx
