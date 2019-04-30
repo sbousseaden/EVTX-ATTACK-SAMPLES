@@ -50,7 +50,8 @@ Can be useful for:
 10. Remote Service Creation - 5145 (IPC$, svcctl, WriteData), 7045 (SystemEvent with svc details) - both from target host
 11. Remote Shell over namedpipe - Sysmon 18 (Image:System) and 3 (SourcePort:445) -> lm_sysmon_18_remshell_over_namedpipe.evtx 
 12. DCOM via MMC20.APPLICATION COM Object - Sysmon Process Create and NetConnect -> LM_impacket_docmexec_mmc_sysmon_01.evtx
-13. WMIEXEC - Process Creation - LM_wmiexec_impacket_sysmon_whoami.evtx
+13. WMIEXEC - Process Creation - Sysmon - LM_wmiexec_impacket_sysmon_whoami.evtx
+14. PSEXEC - Sysmon - LM_sysmon_psexec_smb_meterpreter.evtx
 
 ## Defense Evasion:
 1. RDP Tunneling via SSH - eventid 4624 - Logon Type 10 and Source IP eq to loopback IP address
