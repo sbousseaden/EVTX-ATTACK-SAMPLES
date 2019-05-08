@@ -40,6 +40,8 @@ Can be useful for:
 9. Lazagne.exe - Browsers Saved Credentials access - 4663 (CA_chrome_firefox_opera_4663.evtx) 
 10. Meterpreter - HashDump command
 11. Invoke-Mimikatz from Github: sysmon_3_10_Invoke-Mimikatz_hosted_Github.evtx
+12. DCSync traces on a Domain Controller - Security 4662 - CA_DCSync_4662.evtx [Properties: {1131f6ad-9c07-11d1-f79f-00c04fc2dcd2}
+or Replicating Directory Changes All” extended right]
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
 2. PsExec traces on target host - 5145 - (psexec -r "renamed psexec service name")
