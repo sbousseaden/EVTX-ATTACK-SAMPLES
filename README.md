@@ -33,6 +33,7 @@ Can be useful for:
 4. UAC Bypass via rogue WScript.exe manifest -> sysmon_11_1_15_WScriptBypassUAC.evtx
 5. UAC Bypass via App Path Control.exe Hijack -> sysmon_1_13_UACBypass_AppPath_Control.evtx
 6. Bypass UAC using perfmon and registry key manipulation -> sysmon_13_1_12_11_perfmonUACBypass.evtx
+7. Bypass UAC using compmgmtlauncher and registry key manip -> sysmon_13_1_compmgmtlauncherUACBypass.evtx
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
