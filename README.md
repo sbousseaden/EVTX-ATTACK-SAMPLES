@@ -32,9 +32,10 @@ Can be useful for:
 3. UAC Bypass via hijacking the "IsolatedCommand" value in "shell\runas\command" - Sysmon 13 and 1 -> Sysmon_13_1_UACBypass_SDCLTBypass.evtx
 4. UAC Bypass via rogue WScript.exe manifest -> sysmon_11_1_15_WScriptBypassUAC.evtx
 5. UAC Bypass via App Path Control.exe Hijack -> sysmon_1_13_UACBypass_AppPath_Control.evtx
-6. Bypass UAC using perfmon and registry key manipulation -> sysmon_13_1_12_11_perfmonUACBypass.evtx
-7. Bypass UAC using compmgmtlauncher and registry key manip -> sysmon_13_1_compmgmtlauncherUACBypass.evtx
-8. Bypass UAC using cliconfg (DLL - NTWDBLIB.dll) -> sysmon_11_1_7_uacbypass_cliconfg.evtx
+6. UAC Bypass using perfmon and registry key manipulation -> sysmon_13_1_12_11_perfmonUACBypass.evtx
+7. UAC Bypass using compmgmtlauncher and registry key manip -> sysmon_13_1_compmgmtlauncherUACBypass.evtx
+8. UAC Bypass using cliconfg (DLL - NTWDBLIB.dll) -> sysmon_11_1_7_uacbypass_cliconfg.evtx
+9. UAC Bypass using using mcx2prov (DLL) -> sysmon_1_7_11_mcx2prov_uacbypass.evtx
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
