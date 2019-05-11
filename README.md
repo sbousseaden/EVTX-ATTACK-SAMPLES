@@ -36,9 +36,9 @@ Can be useful for:
 7. UAC Bypass using compmgmtlauncher and registry key manip -> sysmon_13_1_compmgmtlauncherUACBypass.evtx
 8. UAC Bypass using cliconfg (DLL - NTWDBLIB.dll) -> sysmon_11_1_7_uacbypass_cliconfg.evtx
 9. UAC Bypass using using mcx2prov.exe (CRYPTBASE DLL) -> sysmon_1_7_11_mcx2prov_uacbypass.evtx
-10.UAC Bypass using migwiz.exe (CRYPTBASE DLL) -> sysmon_1_7_11_migwiz.evtx
-11.UAC Bypass using sysprep.exe (CRYPTBASE DLL) -> sysmon_1_7_11_sysprep_uacbypass.evtx
-12.Bypass UAC using token manipulation -> security_4624_4673_token_manip.evtx (LT=9 and SeTcbPrivilege use)
+10. UAC Bypass using migwiz.exe (CRYPTBASE DLL) -> sysmon_1_7_11_migwiz.evtx
+11. UAC Bypass using sysprep.exe (CRYPTBASE DLL) -> sysmon_1_7_11_sysprep_uacbypass.evtx
+12. Bypass UAC using token manipulation -> security_4624_4673_token_manip.evtx (LT=9 and SeTcbPrivilege use)
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
