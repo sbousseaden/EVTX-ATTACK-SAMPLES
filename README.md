@@ -16,6 +16,7 @@ Can be useful for:
 4. WMI CommandLineConsumer -> sysmon_20_21_1_CommandLineEventConsumer.evtx
 5. Execution as System via a local temp scheduled task creation that runs as system -> sysmon_1_11_exec_as_system_via_schedtask.evtx
 6. Execution via Rundll32.exe (url.dll,ieframe.dll)|OpenURL,FileProtocolHandler]-> exec_sysmon_1_11_lolbin_rundll32_openurl_FileProtocolHandler.evtx
+7. Launch an executable by calling OpenURL in shdocvw.dll -> exec_sysmon_1_11_lolbin_rundll32_shdocvw_openurl.evtx
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
