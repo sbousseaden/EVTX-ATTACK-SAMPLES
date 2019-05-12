@@ -18,6 +18,7 @@ Can be useful for:
 6. Execution via Rundll32.exe (url.dll,ieframe.dll)|OpenURL,FileProtocolHandler]-> exec_sysmon_1_11_lolbin_rundll32_openurl_FileProtocolHandler.evtx
 7. Launch an executable by calling OpenURL in shdocvw.dll -> exec_sysmon_1_11_lolbin_rundll32_shdocvw_openurl.evtx
 8. Launch an executable payload by calling RouteTheCall in zipfldr.dll -> exec_sysmon_1_11_lolbin_rundll32_zipfldr_RouteTheCall.evtx
+9. Launch an executable by calling the RegisterOCX function in Advpack.dll -> exec_sysmon_1_lolbin_rundll32_advpack_RegisterOCX.evtx
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
