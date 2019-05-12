@@ -21,6 +21,7 @@ Can be useful for:
 9. Launch an executable by calling the RegisterOCX function in Advpack.dll -> exec_sysmon_1_lolbin_rundll32_advpack_RegisterOCX.evtx
 10. Executes payload using the Program Compatibility Assistant (pcalua.exe) -> exec_sysmon_1_lolbin_pcalua.evtx
 11. Execute payload by calling pcwutl.dll,LaunchApplication function -> exec_sysmon_1_rundll32_pcwutl_launchapplication.evtx
+12. Execute payload using "ftp.exe -s:ftp_cmd.txt" binary -> sysmon_1_ftp.evtx
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
