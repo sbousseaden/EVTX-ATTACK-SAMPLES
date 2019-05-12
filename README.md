@@ -29,7 +29,7 @@ Can be useful for:
 4. DCShadow - 4742 Computer Account changed - SPN contains "GC\" and "HOST\" - persistence_security_dcshadow_4742.evtx
 
 ## Privilege Escalation:
-1. Via Named Pipe Impersonation - sysmon_13_1_meterpreter_getsystem_NamedPipeImpersonation.evtx (.\\pipe\random present in sysmon 1 cmdline and in service registry)
+1. Via Named Pipe Impersonation - sysmon_13_1_meterpreter_getsystem_NamedPipeImpersonation.evtx (.\\pipe\random present in sysmon 1 cmdline and in service registry) and System_7045_namedpipe_privesc.evtx for default windows system event 7045 (service creation)
 2. UAC Bypass via EventViewer (mscfile\shell\open set to a cmd) - Sysmon 13 and 1 -> Sysmon_13_1_UAC_Bypass_EventVwrBypass.evtx
 3. UAC Bypass via hijacking the "IsolatedCommand" value in "shell\runas\command" - Sysmon 13 and 1 -> Sysmon_13_1_UACBypass_SDCLTBypass.evtx
 4. UAC Bypass via rogue WScript.exe manifest -> sysmon_11_1_15_WScriptBypassUAC.evtx
