@@ -14,7 +14,8 @@ Can be useful for:
 2. Sysmon 1 - wmighost_sysmon_20_21_1.evtx (scrcons.exe)
 3. MSI Package Exec - Meterpreter Reverse TCP - Sysmon Exec - Exec_sysmon_meterpreter_reversetcp_msipackage.evtx
 4. WMI CommandLineConsumer -> sysmon_20_21_1_CommandLineEventConsumer.evtx
-5. Execution as System via a local temp scheduled task creation that runs as system -> sysmon_1_11_exec_as_system_via_schedtask.evtx	
+5. Execution as System via a local temp scheduled task creation that runs as system -> sysmon_1_11_exec_as_system_via_schedtask.evtx
+6. Execution via Rundll32.exe (url.dll,ieframe.dll)|OpenURL,FileProtocolHandler]-> exec_sysmon_1_11_lolbin_rundll32_openurl_FileProtocolHandler.evtx
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
