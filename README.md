@@ -22,6 +22,8 @@ Can be useful for:
 10. Executes payload using the Program Compatibility Assistant (pcalua.exe) -> exec_sysmon_1_lolbin_pcalua.evtx
 11. Execute payload by calling pcwutl.dll,LaunchApplication function -> exec_sysmon_1_rundll32_pcwutl_launchapplication.evtx
 12. Execute payload using "ftp.exe -s:ftp_cmd.txt" binary -> sysmon_1_ftp.evtx
+13. Execute sct stuff using regsvr32\scrobj.dll from pastebin (both ms binaries renamed and normal ones captured) -> exec_sysmon_1_lolbin_renamed_regsvr32_scrobj.evtx & exec_sysmon_lobin_regsvr32_sct.evtx
+ 
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
