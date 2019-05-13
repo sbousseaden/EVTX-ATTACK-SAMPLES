@@ -36,6 +36,7 @@ Can be useful for:
 2. Assigning required DCSync AD extended rights to a backdoor regular account (PowerView DACL_DCSync_Right_Powerview_ Add-DomainObjectAcl) - EventIDs 5136 & 4662
 3. WMIGhost malwr, sysmon 20, 21 and 1 (ActiveScriptEventConsumer) - wmighost_sysmon_20_21_1.evtx
 4. DCShadow - 4742 Computer Account changed - SPN contains "GC\" and "HOST\" - persistence_security_dcshadow_4742.evtx
+5. Bitsadminexec - sysmon_1_persist_bitsjob_SetNotifyCmdLine.evtx (runtime traces)	& persist_bitsadmin_Microsoft-Windows-Bits-Client-Operational.evtx (creation and runtime traces)
 
 ## Privilege Escalation:
 1. Via Named Pipe Impersonation - sysmon_13_1_meterpreter_getsystem_NamedPipeImpersonation.evtx (.\\pipe\random present in sysmon 1 cmdline and in service registry) and System_7045_namedpipe_privesc.evtx for default windows system event 7045 (service creation)
