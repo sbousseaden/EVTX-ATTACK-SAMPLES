@@ -88,6 +88,8 @@ or Replicating Directory Changes All” extended right]
 15. LM via DCOM ShellBrowserWindow or ShellWindows COM classes - explorer.exe with internal IP addresses network connections over RPC high port numbers -> LM_sysmon_3_DCOM_ShellBrowserWindow_ShellWindows.evtx
 16. LM via DCOM MSHTA (known as LethalHTA) -> LM_DCOM_MSHTA_LethalHTA_Sysmon_3_1.evtx
 17. LM via writing to the startup folder exposed via tsclient (RDP local resources default share, sysmon 11) -> LM_tsclient_startup_folder.evtx
+18. Remote execution via WinRM from target host (sysmon process create winrshost.exe) -> LM_winrm_exec_sysmon_1_winrshost.evtx
+19. Remote PowerShell Session (sysmon process create wsmprovhost.exe) -> LM_PowershellRemoting_sysmon_1_wsmprovhost.evtx
 
 ## Defense Evasion:
 1. RDP Tunneling via SSH - eventid 4624 - Logon Type 10 and Source IP eq to loopback IP address
