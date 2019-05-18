@@ -71,6 +71,7 @@ Can be useful for:
 11. Invoke-Mimikatz from Github: sysmon_3_10_Invoke-Mimikatz_hosted_Github.evtx
 12. DCSync traces on a Domain Controller - Security 4662 - CA_DCSync_4662.evtx [Properties: {1131f6ad-9c07-11d1-f79f-00c04fc2dcd2}
 or Replicating Directory Changes All” extended right]
+
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
 2. PsExec traces on target host - 5145 - (psexec -r "renamed psexec service name")
@@ -106,3 +107,4 @@ or Replicating Directory Changes All” extended right]
 11. Office VBA Sensitive Security Setting Changed ->  de_sysmon_13_VBA_Security_AccessVBOM.evtx
 12. PowerShell CLM local machine environment variable "__PSLockdownPolicy" removed-> DE_Powershell_CLM_Disabled_Sysmon_12.evtx
 13. User Account Control Disabled - Sysmon EID 12/12 -> DE_UAC_Disabled_Sysmon_12_13.evtx
+14. Unmanaged PowerShell via PSInject -> de_unmanagedpowershell_psinject_sysmon_7_8_10.evtx
