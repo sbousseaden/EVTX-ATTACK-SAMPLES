@@ -110,3 +110,4 @@ or Replicating Directory Changes All” extended right]
 12. PowerShell CLM local machine environment variable "__PSLockdownPolicy" removed-> DE_Powershell_CLM_Disabled_Sysmon_12.evtx
 13. User Account Control Disabled - Sysmon EID 12/12 -> DE_UAC_Disabled_Sysmon_12_13.evtx
 14. Unmanaged PowerShell via PSInject -> de_unmanagedpowershell_psinject_sysmon_7_8_10.evtx
+15. PowerShell scriptblock logging deleted or disbaled -> de_PsScriptBlockLogging_disabled_sysmon12_13.evtx
