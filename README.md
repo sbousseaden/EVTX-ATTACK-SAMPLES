@@ -40,7 +40,7 @@ Can be useful for:
 4. DCShadow - 4742 Computer Account changed - SPN contains "GC\" and "HOST\" - persistence_security_dcshadow_4742.evtx
 5. Bitsadminexec - sysmon_1_persist_bitsjob_SetNotifyCmdLine.evtx (runtime traces)	& persist_bitsadmin_Microsoft-Windows-Bits-Client-Operational.evtx (creation and runtime traces)
 6. Persistent System Access via replacing onscreenkeyboard PE with cmd.exe -> persistence_accessibility_features_osk_sysmon1.evtx
-7. Persistence via COM hijack of : {BCDE0395-E52F-467C-8E3D-C4579291692E}" - CLSID_MMDeviceEnumerator (used i.e. by Firefox) -> persist_firefox_comhijack_sysmon_11_13_7_1.evtx
+7. Persistence via COM hijack of : {BCDE0395-E52F-467C-8E3D-C4579291692E} - CLSID_MMDeviceEnumerator (used i.e. by Firefox) -> persist_firefox_comhijack_sysmon_11_13_7_1.evtx
 
 ## Privilege Escalation:
 1. Via Named Pipe Impersonation - sysmon_13_1_meterpreter_getsystem_NamedPipeImpersonation.evtx (.\\pipe\random present in sysmon 1 cmdline and in service registry) and System_7045_namedpipe_privesc.evtx for default windows system event 7045 (service creation)
