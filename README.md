@@ -25,6 +25,8 @@ Can be useful for:
 13. Execute sct stuff using regsvr32\scrobj.dll from pastebin (both ms binaries renamed and normal ones captured) -> exec_sysmon_1_lolbin_renamed_regsvr32_scrobj.evtx & exec_sysmon_lobin_regsvr32_sct.evtx
 12. AMSI bypass via jscript9.dll (not instrumented by AMSI) -> exec_sysmon_1_7_jscript9_defense_evasion.evtx
 13. rundll32 (mshtml,RunHTMLApplication)-> mshta -> schtasks.exe -> exec_persist_rundll32_mshta_scheduledtask_sysmon_1_3_11.evtx
+14. Exec via Drive-by "Adobe Flash CVE-2018-15982" -> exec_driveby_cve-2018-15982_sysmon_1_10.evtx	
+
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
