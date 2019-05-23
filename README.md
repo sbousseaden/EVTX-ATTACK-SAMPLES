@@ -118,3 +118,4 @@ or Replicating Directory Changes All” extended right]
 13. User Account Control Disabled - Sysmon EID 12/12 -> DE_UAC_Disabled_Sysmon_12_13.evtx
 14. Unmanaged PowerShell via PSInject -> de_unmanagedpowershell_psinject_sysmon_7_8_10.evtx
 15. PowerShell scriptblock logging deleted or disbaled -> de_PsScriptBlockLogging_disabled_sysmon12_13.evtx
+16. RDP Port forwarding via netsh  portproxy cmd -> de_portforward_netsh_rdp_sysmon_13_1.evtx
