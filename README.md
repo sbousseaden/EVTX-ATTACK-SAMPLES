@@ -120,3 +120,4 @@ or Replicating Directory Changes All” extended right]
 14. Unmanaged PowerShell via PSInject -> de_unmanagedpowershell_psinject_sysmon_7_8_10.evtx
 15. PowerShell scriptblock logging deleted or disbaled -> de_PsScriptBlockLogging_disabled_sysmon12_13.evtx
 16. RDP Port forwarding via netsh  portproxy cmd -> de_portforward_netsh_rdp_sysmon_13_1.evtx
+17. PowerShell Execution Policy Changed - de_powershell_execpolicy_changed_sysmon_13.evtx
