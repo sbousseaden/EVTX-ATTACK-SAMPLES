@@ -121,3 +121,5 @@ or Replicating Directory Changes All” extended right]
 15. PowerShell scriptblock logging deleted or disbaled -> de_PsScriptBlockLogging_disabled_sysmon12_13.evtx
 16. RDP Port forwarding via netsh  portproxy cmd -> de_portforward_netsh_rdp_sysmon_13_1.evtx
 17. PowerShell Execution Policy Changed - de_powershell_execpolicy_changed_sysmon_13.evtx
+18. APT10 DLL side loading "jli.dll via jjs.exe", ProcessHollowing masqurading as svchost.exe -> apt10_jjs_sideloading_prochollowing_persist_as_service_sysmon_1_7_8_13.evtx	
+ 
