@@ -27,6 +27,7 @@ Can be useful for:
 13. rundll32 (mshtml,RunHTMLApplication)-> mshta -> schtasks.exe -> exec_persist_rundll32_mshta_scheduledtask_sysmon_1_3_11.evtx
 14. Exec via Drive-by "Adobe Flash CVE-2018-15982" -> exec_driveby_cve-2018-15982_sysmon_1_10.evtx (SrcImg=iexplorer.exe and CallTrace contains "UNKNOWN")	
 15. Exec of cmds/code via XSL (Extensible Markup Language) and WMIC & MSXSL -> exec_wmic_xsl_internet_sysmon_3_1_11.evtx & exec_msxsl_xsl_sysmon_1_7.evtx
+16. Exec & Persist from Volume Shadow Copy -> sysmon_exec_from_vss_persistence.evtx
 
 
 
