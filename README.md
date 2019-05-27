@@ -37,6 +37,7 @@ Can be useful for:
 4. Process Listing via meterpreter "ps" command - meterpreter_ps_cmd_process_listing_sysmon_10.evtx (more than 10 of sysmon 10 events from same src process and twoard different target images and with same calltrace and granted access)
 5. Invoke-UserHunter traces on the source machine --> Recon_Sysmon_3_Invoke_UserHunter_SourceMachine.evtx
 6. Traces of  shares enumeration using "net view \\target /all" on a target host using sysmon -> enum_shares_target_sysmon_3_18.evtx
+7. Discovery of sensitive IIS config files and saved passwords using IIS appcmd.exe utility -> sysmon_1_iis_pwd_and_config_discovery_appcmd.evtx
 
 ## Persistence:
 1. Application Shimming: sysmon (1, 13, 11) and windowd native event 500 "Microsoft-Windows-Application-Experience\Program-Telemetry"
