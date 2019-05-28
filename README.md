@@ -48,6 +48,8 @@ Can be useful for:
 6. Persistent System Access via replacing onscreenkeyboard PE with cmd.exe -> persistence_accessibility_features_osk_sysmon1.evtx
 7. Persistence via COM hijack of : {BCDE0395-E52F-467C-8E3D-C4579291692E} - CLSID_MMDeviceEnumerator (used i.e. by Firefox) -> persist_firefox_comhijack_sysmon_11_13_7_1.evtx
 8. Persistence via COM hijack of "Outlook Protocol Manager" using TreatAs key for clsid lookup redirection (Turla APT Outlook backdoor) -> persist_turla_outlook_backdoor_comhijack.evtx
+9. Startup++ -> persistence_startup_UserShellStartup_Folder_Changed_sysmon_13.evtx	
+
 
 ## Privilege Escalation:
 1. Via Named Pipe Impersonation - sysmon_13_1_meterpreter_getsystem_NamedPipeImpersonation.evtx (.\\pipe\random present in sysmon 1 cmdline and in service registry) and System_7045_namedpipe_privesc.evtx for default windows system event 7045 (service creation)
