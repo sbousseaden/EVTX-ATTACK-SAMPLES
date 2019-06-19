@@ -51,6 +51,8 @@ Can be useful for:
 8. Persistence via COM hijack of "Outlook Protocol Manager" using TreatAs key for clsid lookup redirection (Turla APT Outlook backdoor) -> persist_turla_outlook_backdoor_comhijack.evtx
 9. Startup++ -> persistence_startup_UserShellStartup_Folder_Changed_sysmon_13.evtx
 10. Via Winlogon Shell registry -> sysmon_13_1_persistence_via_winlogon_shell.evtx	(13 for reg change, 1 with parentproc eqto userinit.exe for runtime detection) 
+11. Persistence using IFEO GlobalFlag and SilentProcessExit ImageFile Hijack (evil.exe starts when notepad.exe is closed) -> persistence_SilentProcessExit_ImageHijack_sysmon_13_1.evtx	(evil.exe is started as a child of werfault.exe)
+
 
 ## Privilege Escalation:
 1. Via Named Pipe Impersonation - sysmon_13_1_meterpreter_getsystem_NamedPipeImpersonation.evtx (.\\pipe\random present in sysmon 1 cmdline and in service registry) and System_7045_namedpipe_privesc.evtx for default windows system event 7045 (service creation)
