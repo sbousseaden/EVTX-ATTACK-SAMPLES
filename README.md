@@ -109,6 +109,7 @@ or Replicating Directory Changes All” extended right]
 19. Remote PowerShell Session (sysmon process create wsmprovhost.exe) -> LM_PowershellRemoting_sysmon_1_wsmprovhost.evtx
 20. LM via InternetExplorer.Application COM object -> LM_dcom_InternetExplorer.Application_sysmon_1.evtx
 21. LM via WebShell (w3wp.exe -> cmd.exe -> whoami.exe) -> LM_typical_IIS_webshell_sysmon_1_10_traces.evtx
+22. Reverse Shell via PowerCat -> powercat_revShell_sysmon_1_3.evtx	
 
 
 ## Defense Evasion:
