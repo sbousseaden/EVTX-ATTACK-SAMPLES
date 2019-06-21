@@ -86,7 +86,7 @@ Can be useful for:
 11. Invoke-Mimikatz from Github: sysmon_3_10_Invoke-Mimikatz_hosted_Github.evtx
 12. DCSync traces on a Domain Controller - Security 4662 - CA_DCSync_4662.evtx [Properties: {1131f6ad-9c07-11d1-f79f-00c04fc2dcd2}
 or Replicating Directory Changes All” extended right]
-13. Lsass memory dump using Outflank Dumpert HKTL -> sysmon_1_11_outflank_dumpert.evtx	(sysmon 10 with CallTrace pointing to dbghelp.dll -> MiniDumpWriteDump) and ".dmp" file written to disk (almost same IOC as for #1 with procdump.exe or taskmgr.exe) 
+13. Lsass memory dump using Outflank Dumpert HKTL and @hoangprod's AndrewSpecial lsass memdump utility -> sysmon_10_11_outlfank_dumpert_and_andrewspecial_memdump.evtx	(sysmon 10 with CallTrace pointing to dbghelp.dll -> MiniDumpWriteDump) and ".dmp" file written to disk (almost same IOC as for #1 with procdump.exe or taskmgr.exe) 
 
 ## Lateral Movement:
 1. RemCom (open source psexec) traces on target host eventid 5145
