@@ -110,7 +110,9 @@ or Replicating Directory Changes All” extended right]
 19. Remote PowerShell Session (sysmon process create wsmprovhost.exe) -> LM_PowershellRemoting_sysmon_1_wsmprovhost.evtx
 20. LM via InternetExplorer.Application COM object -> LM_dcom_InternetExplorer.Application_sysmon_1.evtx
 21. LM via WebShell (w3wp.exe -> cmd.exe -> whoami.exe) -> LM_typical_IIS_webshell_sysmon_1_10_traces.evtx
-22. Reverse Shell via PowerCat -> powercat_revShell_sysmon_1_3.evtx	
+22. Reverse Shell via PowerCat -> powercat_revShell_sysmon_1_3.evtx
+23. Allow remote unauthenticated users "NullSessionPipe registry" to connect to a rogue named pipe -> LM_add_new_namedpipe_tp_nullsession_registry_turla_like_ttp.evtx	
+
 
 
 ## Defense Evasion:
