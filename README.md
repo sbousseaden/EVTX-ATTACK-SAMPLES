@@ -30,8 +30,8 @@ Can be useful for:
 16. Exec & Persist from Volume Shadow Copy -> sysmon_exec_from_vss_persistence.evtx
 17. Lol-bin exec stuff via vshadow.exe (external MS SDK utility) -> sysmon_lolbin_bohops_vshadow_exec.evtx	 
 18. SharpShooter vbs and hta stagless payload executed to deliver (in-memory) meterpreter shellcode -> sysmon_vbs_sharpshooter_stageless_meterpreter.evtx	& sysmon_mshta_sharpshooter_stageless_meterpreter.evtx
-19. Traces of Invoke-ReflectivePEInjection (sysmon 10, 8) to inject meterpreter into notepad (sysmon 10,1, 3) -> Sysmon_meterpreter_ReflectivePEInjection_to_notepad_.evtx	
-
+19. Traces of Invoke-ReflectivePEInjection (sysmon 10, 8) to inject meterpreter into notepad (sysmon 10,1, 3) -> Sysmon_meterpreter_ReflectivePEInjection_to_notepad_.evtx
+20. Execution via malicious Compilted HTML file -> Sysmon_Exec_CompiledHTML.evtx	(parent_process_name = hh.exe)
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
