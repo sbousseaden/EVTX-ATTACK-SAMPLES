@@ -72,6 +72,7 @@ Can be useful for:
 13. UAC Bypass using using cmstp and ini file -> sysmon_1_13_11_cmstp_ini_uacbypass.evtx (dllhost.exe {3E5FC7F9-9A51-4367-9063-A120244FBEC7} hosting CMSTPLUA and spawning desired elevated process)
 14. Elevate from administrator to NT AUTHORITY SYSTEM using handle inheritance (lsass.exe spawn process) -> sysmon_privesc_from_admin_to_system_handle_inheritance.evtx
 15. Rotten Potato exploit to esc from service account to local system via impersonation (bits COM fetch, RPC rogue server, NTLM MITM)-> privesc_rotten_potato_from_webshell_metasploit_sysmon_1_8_3.evtx	
+16. UAC Bypass via mocking Windows Trusted Folders -> sysmon_11_7_1_uacbypass_windirectory_mocking.evtx
 
 
 ## Credential Access:
