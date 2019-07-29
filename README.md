@@ -1,4 +1,4 @@
-# Windows EVTX Samples:
+# Windows EVTX Samples [More than 120 EVTX examples]:
 
 This is a container for windows events samples associated to specific attack and post-exploitation techniques. 
 Can be useful for:
