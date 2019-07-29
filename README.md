@@ -32,6 +32,7 @@ Can be useful for:
 18. SharpShooter vbs and hta stagless payload executed to deliver (in-memory) meterpreter shellcode -> sysmon_vbs_sharpshooter_stageless_meterpreter.evtx	& sysmon_mshta_sharpshooter_stageless_meterpreter.evtx
 19. Traces of Invoke-ReflectivePEInjection (sysmon 10, 8) to inject meterpreter into notepad (sysmon 10,1, 3) -> Sysmon_meterpreter_ReflectivePEInjection_to_notepad_.evtx
 20. Execution via malicious Compilted HTML file -> Sysmon_Exec_CompiledHTML.evtx	(parent_process_name = hh.exe)
+21. Execution via CPL module - Shell32.dll!Control_RunDLL (sysmon_1_11_rundll32_cpl_ostap.evtx) - Ostap JS malware
 
 ## Reconnaissance:
 1. PsLoggedOn.exe traces on the destination host
