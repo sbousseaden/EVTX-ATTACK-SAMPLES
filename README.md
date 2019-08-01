@@ -1,6 +1,6 @@
 # Windows EVTX Samples [More than 120 EVTX examples]:
 
-![alt text](https://raw.githubusercontent.com/sbousseaden/EVTX-ATTACK-SAMPLES/blob/master/AIEvent.jpg)
+![alt text](https://raw.githubusercontent.com/sbousseaden/EVTX-ATTACK-SAMPLES/master/AIEvent.jpg)
 
 
 This is a container for windows events samples associated to specific attack and post-exploitation techniques. 
