@@ -82,6 +82,7 @@ Can be useful for:
 20. UAC Bypass method 32 of UACME (DLL hijack: duser.dll or osksupport.dll) -> Sysmon_UACME_32.evtx [not stable]
 21. UAC Bypass method 22 of UACME (DLL hijack: comctl32.dll, ParentProc consent.exe) -> Sysmon_UACME_22.evtx
 22. UAC Bypass method 23 (DLL hijck: DismCore.dll, ParentProc Dism.exe) -> Sysmon_UACME_23.evtx
+23. UAC Bypass 36 and 37 of UACME failed but left FileCreation artifact tied to DLL hijack (MsCoree.dll, GdiPlus.dll) both tested on [Version 10.0.17763.615]
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
