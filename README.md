@@ -80,6 +80,8 @@ Can be useful for:
 18. UAC Bypass method 34 of UACME (Environment variable expansion windir and hijac\exec of default scheduled task silentcleanup) -> Sysmon_UACME_34.evtx.
 19. UAC Bypass method 30 of UACME (DLL hijack wow64log.dll) -> Sysmon_UACME_30.evtx
 20. UAC Bypass method 32 of UACME (DLL hijack: duser.dll or osksupport.dll) -> Sysmon_UACME_32.evtx [not stable]
+21. UAC Bypass method 22 of UACME (DLL hijack: comctl32.dll, ParentProc consent.exe) -> Sysmon_UACME_22.evtx
+22. UAC Bypass method 23 (DLL hijck: DismCore.dll, ParentProc Dism.exe) -> Sysmon_UACME_23.evtx
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
