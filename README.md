@@ -87,6 +87,7 @@ Can be useful for:
 25. PrivExchange by @_dirkjan (Relay of Exchange Machine account via NTLM to AD and perform a privchage to elevate to domain admin) -> priveschange_dirkjan.evtx
 26. UAC Bypass method 39 of UACME (Dll hijack pe386.dll loaded by mmc.exe) -> Sysmon_UACME_39.evtx
 27. UAC Bypass method 41 of UACME (parent process dllhost.exe with CMSTPLUA COM CLSID in the cmdline) -> Sysmon_UACME_41.evtx
+28. UAC Bypass method 43 of UACME (parent process dllhost.exe with  Color Management COM CLSID in the cmdline) -> Sysmon_UACME_43.evtx
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
