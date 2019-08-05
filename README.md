@@ -92,6 +92,7 @@ Can be useful for:
 29. UAC Bypass method 45 of UACME (registry change) -> Sysmon_UACME_45.evtx
 30. UAC Bypass method 53 of UACME (reg change, control.exe parent proc of elevated payload) -> Sysmon_UACME_53.evtx
 31. UAC Bypass method 56 of UACME (reg change, WSReset.exe as parent process) -> Sysmon_UACME_56.evtx
+32. Invoke-BypassUACTokenManipulation and Invoke-TokenDuplication have a hardcoded default domain\user (o\l) within CreateProcessWithLogonW, which create an artifacts in event 4624 with logon type equal to 9 and Network Account Name:	l, Network Account Domain:	o  [https://twitter.com/pwndizzle/status/1123157847775305728] 
 
 ## Credential Access:
 1. Memory dump of lsass.exe using procdump.exe and taskmgr.exe (sysmon 10 & 11)
