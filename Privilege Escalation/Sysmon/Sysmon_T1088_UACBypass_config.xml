@@ -50,7 +50,6 @@ MITRE ATT&CK T1088 - https://attack.mitre.org/techniques/T1088/
 	  <ParentImage condition="image" name="PrivEsc - T1088 - UACBypass cliconfig">cliconfg.exe</ParentImage>
 	  <ParentImage condition="image" name="PrivEsc - T1088 - UACBypass MscFile hijack">CompMgmtLauncher.exe</ParentImage>
 	  <ParentImage condition="image" name="PrivEsc - T1088 - UACBypass osk dll hijack">osk.exe</ParentImage>
-	  <ParentCommandLine condition="contains" name="PrivEsc - T1134 - Possible Access Token Manipulation">-k netsvcs -s seclogon</ParentCommandLine>
     </ProcessCreate>	
     <ProcessCreate onmatch="exclude">
 	  <Image condition="image">c:\windows\system32\mmc.exe</Image>
