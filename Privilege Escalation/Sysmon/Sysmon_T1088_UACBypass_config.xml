@@ -50,12 +50,18 @@ MITRE ATT&CK T1088 - https://attack.mitre.org/techniques/T1088/
 	  <ParentImage condition="image" name="PrivEsc - T1088 - UACBypass cliconfig">cliconfg.exe</ParentImage>
 	  <ParentImage condition="image" name="PrivEsc - T1088 - UACBypass MscFile hijack">CompMgmtLauncher.exe</ParentImage>
 	  <ParentImage condition="image" name="PrivEsc - T1088 - UACBypass osk dll hijack">osk.exe</ParentImage>
-	  <ParentCommandLine>c:\windows\system32\svchost.exe -k netsvcs -s Appinfo</ParentCommandLine> <!-- can be useful for tokens manip detection -->
+	  <ParentCommandLine condition="contains" name="PrivEsc - T1134 - Possible Access Token Manipulation">-k netsvcs -s seclogon</ParentCommandLine> <!-- can be useful for tokens manip detection -->
     </ProcessCreate>	
     <ProcessCreate onmatch="exclude">
 	  <Image condition="image">c:\windows\system32\mmc.exe</Image>
 	  <Image>C:\Windows\System32\WerFault.exe</Image>
 	  <Image>C:\Windows\System32\conhost.exe</Image>
+	  <Image>C:\Windows\System32\WerFault.exe</Image>
+	  <Image>C:\Windows\System32\conhost.exe</Image>
+	  <Image>C:\Windows\System32\sihost.exe</Image>
+	  <Image>C:\Windows\Syswow64\sihost.exe</Image>
+	  <Image>C:\Windows\System32\Defrag.exe</Image>
+	  <Image>C:\Windows\Syswow64\Defrag.exe</Image>
     </ProcessCreate>
 
 
@@ -168,7 +174,7 @@ MITRE ATT&CK T1088 - https://attack.mitre.org/techniques/T1088/
     <FileCreateStreamHash onmatch="include"/>
     <WmiEvent onmatch="include"/>
     <ProcessAccess onmatch="include"/>
-    <CreateRemoteThread onmatch="exclude"/>
+    <CreateRemoteThread onmatch="include"/>
  
  </EventFiltering>
   
