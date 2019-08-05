@@ -13,8 +13,6 @@ Author: Samir Bousseaden
 Contact: @SBousseaden
 Credit: https://github.com/hfiref0x/UACME 
 MITRE ATT&CK T1088 - https://attack.mitre.org/techniques/T1088/
-Tactics: Defense Evasion & Privilege Escalation
-PrivEsc - T1088 - T1088 - UACBypass Mocking Trusted WinFolders
 
 -->
 
