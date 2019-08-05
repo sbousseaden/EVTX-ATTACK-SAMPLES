@@ -44,6 +44,7 @@ Can be useful for:
 5. Invoke-UserHunter traces on the source machine --> Recon_Sysmon_3_Invoke_UserHunter_SourceMachine.evtx
 6. Traces of  shares enumeration using "net view \\target /all" on a target host using sysmon -> enum_shares_target_sysmon_3_18.evtx
 7. Discovery of sensitive IIS config files and saved passwords using IIS appcmd.exe utility -> sysmon_1_iis_pwd_and_config_discovery_appcmd.evtx
+8. Enumeration of local user or group in Win10/16 and above will leave eventids 4798 or 4799 if enabled -> discovery_local_user_or_group_windows_security_4799_4798.evtx
 
 ## Persistence:
 1. Application Shimming: sysmon (1, 13, 11) and windowd native event 500 "Microsoft-Windows-Application-Experience\Program-Telemetry"
