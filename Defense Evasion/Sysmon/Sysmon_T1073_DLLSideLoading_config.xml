@@ -12,17 +12,16 @@
 
 Author: Samir Bousseaden
 Contact: @SBousseaden
+MITRE ATT&CK T1073: https://attack.mitre.org/techniques/T1073/
 Credits: 
  http://www.hexacorn.com/blog/2016/0/page/31/
  https://threatrecon.nshc.net/2019/07/25/growth-of-sectorf01-groups-cyber-espionage-activities/ 
  https://www.welivesecurity.com/2019/07/11/buhtrap-zero-day-espionage-campaigns/
- https://remoteawesomethoughts.blogspot.com/2019/05/windows-10-task-schedulerservice.html
  https://quequero.org/2013/09/quick-analysissome-observation-about-a-low-detection-flash_update-exe/
  https://app.any.run/tasks/3fcfd265-ef80-4749-a24b-39364a079802 
- https://www.hybrid-analysis.com/sample/0fb0636a2823e8fb63681b6bf9d1dd910c7a1e3ed27d19fda1db11dda8e578f8?environmentId=100 https://www.microsoft.com/security/blog/2018/03/01/finfisher-exposed-a-researchers-tale-of-defeating-traps-tricks-and-complex-virtual-machines/ 
+ https://www.hybrid-analysis.com/sample/0fb0636a2823e8fb63681b6bf9d1dd910c7a1e3ed27d19fda1db11dda8e578f8?environmentId=100 
+ https://www.microsoft.com/security/blog/2018/03/01/finfisher-exposed-a-researchers-tale-of-defeating-traps-tricks-and-complex-virtual-machines/ 
  
-MITRE ATT&CK T1073: https://attack.mitre.org/techniques/T1073/
-
 -->
 
     <ImageLoad onmatch="include">	  
