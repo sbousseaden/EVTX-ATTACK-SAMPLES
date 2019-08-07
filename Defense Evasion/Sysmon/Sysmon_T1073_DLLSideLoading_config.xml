@@ -1,0 +1,196 @@
+<Sysmon schemaversion="4.1">
+<EventFiltering>
+
+<!--         
+
+    ___  __    __   __ _     _              __                 _ _             
+   /   \/ /   / /  / _(_) __| | ___        / /  ___   __ _  __| (_)_ __   __ _ 
+  / /\ / /   / /   \ \| |/ _` |/ _ \_____ / /  / _ \ / _` |/ _` | | '_ \ / _` |
+ / /_// /___/ /___ _\ \ | (_| |  __/_____/ /__| (_) | (_| | (_| | | | | | (_| |
+/___,'\____/\____/ \__/_|\__,_|\___|     \____/\___/ \__,_|\__,_|_|_| |_|\__, |
+                                                                         |___/ 
+
+Author: Samir Bousseaden
+Contact: @SBousseaden
+Credits: 
+ http://www.hexacorn.com/blog/2016/0/page/31/
+ https://threatrecon.nshc.net/2019/07/25/growth-of-sectorf01-groups-cyber-espionage-activities/ 
+ https://www.welivesecurity.com/2019/07/11/buhtrap-zero-day-espionage-campaigns/
+ https://remoteawesomethoughts.blogspot.com/2019/05/windows-10-task-schedulerservice.html
+ https://quequero.org/2013/09/quick-analysissome-observation-about-a-low-detection-flash_update-exe/
+ https://app.any.run/tasks/3fcfd265-ef80-4749-a24b-39364a079802 
+ https://www.hybrid-analysis.com/sample/0fb0636a2823e8fb63681b6bf9d1dd910c7a1e3ed27d19fda1db11dda8e578f8?environmentId=100 https://www.microsoft.com/security/blog/2018/03/01/finfisher-exposed-a-researchers-tale-of-defeating-traps-tricks-and-complex-virtual-machines/ 
+ 
+MITRE ATT&CK T1073: https://attack.mitre.org/techniques/T1073/
+
+-->
+
+    <ImageLoad onmatch="include">	  
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">wwlib.dll</ImageLoaded> <!-- winword.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">BIB.dll</ImageLoaded> <!-- Adobe A3DUtility.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">goopdate.dll</ImageLoaded> <!-- vuln GoogleUpdate.exe version-->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">msfte.dll</ImageLoaded> <!-- searchindexer.exe and searchprotocolhost.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">Flash Video Extension.dll</ImageLoaded> <!-- Adobe AcroTranscoder.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">UxTheme.dll</ImageLoaded> <!-- Adobe FlashPlayerApp.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">WeChatWin.dll</ImageLoaded> <!-- WeChat.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">coccocpdate.dll</ImageLoaded> <!-- CocCocUpdate.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">chrome_elf.dll</ImageLoaded> <!-- 360se.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">dbghelp.dll</ImageLoaded> <!-- 360 SoftManager.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">FaultRep.dll</ImageLoaded> <!-- FontsSet.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">McVsoCfg.dll</ImageLoaded>
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">product_info.dll</ImageLoaded> <!-- Kasper avpla.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">wsc.dll</ImageLoaded> <!-- Avast wsc_proxy.exe -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">winspool.drv</ImageLoaded><!-- loaded by avz.exe free AV  -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">WptsExtensions.dll</ImageLoaded> <!--  -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">NvSmartMax.dll</ImageLoaded> <!-- -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">Duser.dll</ImageLoaded> <!-- loaded by credwiz.exe -->
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">AShldRes.DLL</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">CommFunc.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">chrome_frame_helper.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">DESqmWrapper.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">fslapi.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">FSPMAPI.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">Sidebar.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">hha.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">hccutils.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">NtUserEx.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">McUtil.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">MpSvc.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">mPclient.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">NvSmartMax.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">OInfo11.ocx</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">ACLUI.DLL</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">iviewers.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">NtUserEx.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">RasTls.dll</ImageLoaded>
+      <!--  -->
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">rc.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">ssMUIDLL.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">winmm.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">msi.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">Ushata.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">libvlc.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">AhnI2.dll</ImageLoaded>
+	  <ImageLoaded condition="end with" name="Evasion - Possible DLL Side Loading via jjs.exe">jli.dll</ImageLoaded>
+	  <!-- -->
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">sspisrv.dll</ImageLoaded>
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">ftllib.dll</ImageLoaded>
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">userenv.dll</ImageLoaded>
+    </ImageLoad>
+	
+	<!-- ImageLoad Exclusion config-section - always depend on ur own env, good luck with that -->
+    <ImageLoad onmatch="exclude">
+	  <!-- <SignatureStatus>Valid</SignatureStatus> --> <!-- enable this one if you want to capture only unsigned ones-->
+	  <Image>C:\Program Files\Microsoft Policy Platform\policyHost.exe</Image>
+	  <ImageLoaded condition="begin with">C:\Program Files\Microsoft Office\root\Office</ImageLoaded> <!-- wwlib.dll side loading FP -->
+	  <Image>C:\Windows\System32\WinSAT.exe</Image>
+	  <Image condition="image">firfox.exe</Image>
+	  <Image>C:\Windows\System32\wermgr.exe</Image> <!-- FP for schtask COM -->
+	  <Image>C:\Windows\System32\sdiagnhost.exe</Image><!-- FPs for wmiutil -->
+	  <ImageLoaded>C:\Windows\System32\cryptbase.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\SysWOW64\winspool.drv</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\winspool.drv</ImageLoaded>
+	  <ImageLoaded condition="begin with">PathC:\Windows\WinSxS</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\amsi.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\msi.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\userenv.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\winmm.dll</ImageLoaded>
+	  <ImageLoaded condition="end with">.exe</ImageLoaded>
+	  <Image>C:\Windows\System32\dllhost.exe</Image>
+	  <Image condition="end with">powershell.exe</Image>
+	  <Image condition="begin with">C:\Windows\Microsoft.NET\Framework64\</Image>
+	  <Image>C:\Windows\System32\DeviceCensus.exe</Image>
+	  <Image>C:\Windows\System32\systeminfo.exe</Image>
+	  <Image>C:\Windows\System32\LockAppHost.exe</Image>
+	  <Image>C:\Program Files\Google\Update\GoogleUpdate.exe</Image>
+	  <Hashes condition="end with">AA02A4789AEBC104EA53E559F824A5B4</Hashes> <!-- IMPHASH of OneDriveStandaloneUpdater.exe -->
+	  <Image condition="end with">powershell_ise.exe</Image>
+	  <Hashes condition="end with">727B32239F3556C6C9E82ADE6087C4AC</Hashes>
+	  <Image>C:\Windows\System32\wbem\WmiPrvSE.exe</Image>
+	  <Image>C:\Windows\System32\SrTasks.exe</Image>
+	  <Image condition="end with">DismHost.exe</Image>
+	  <Image condition="begin with">C:\Windows\Microsoft.NET\Framework\</Image>
+	  <Image>C:\Windows\System32\wbem\WmiApSrv.exe</Image>
+	  <Image>C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</Image>
+	  <Image>C:\Program Files\Microsoft Policy Platform\policyHost.exe</Image>
+	  <Image>C:\Windows\System32\SearchProtocolHost.exe</Image>
+	  <Image>C:\Windows\System32\SearchFilterHost.exe</Image>
+	  <Image>C:\Windows\System32\backgroundTaskHost.exe</Image>
+	  <Image>C:\Windows\servicing\TrustedInstaller.exe</Image>
+	  <Image condition="begin with">C:\Windows\System32\taskhost</Image>
+	  <Image>C:\Windows\System32\LogonUI.exe</Image>
+	  <Image>C:\Windows\System32\wifitask.exe</Image>
+	  <Image>C:\Program Files\Microsoft Data Protection Manager\DPM\bin\DPMRA.exe</Image>
+	  <Image>C:\Windows\System32\VSSVC.exe</Image>
+	  <Image>C:\Windows\System32\netsh.exe</Image>
+	  <Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image>
+	  <Image>C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
+	  <Image>C:\Windows\System32\raserver.exe</Image>
+	  <Image>C:\Windows\System32\RuntimeBroker.exe</Image>
+	  <Image condition="begin with">C:\Windows\SystemApps\</Image>
+	  <Image>C:\Windows\System32\SearchIndexer.exe</Image>
+	  <Image>C:\Windows\explorer.exe</Image>
+	  <Image>C:\Windows\System32\sppsvc.exe</Image>
+	  <Image>C:\Program Files\Internet Explorer\iexplore.exe</Image>
+	  <Image condition="begin with">C:\Windows\CCM\</Image>
+	  <Image>C:\Program Files\Manufacturer\Endpoint Agent\edpa.exe</Image>
+	  <Image>C:\Program Files\Microsoft Data Protection Manager\DPM\bin\DPMClientService.exe</Image>
+	  <Image condition="begin with">C:\Program Files (x86)\Microsoft Visual Studio\</Image>
+	  <Image>C:\Windows\System32\provtool.exe</Image>
+	  <Image>C:\Program Files\CONEXANT\SA3\HP-NB-AIO\SmartAudio3.exe</Image>
+	  <Image>C:\Windows\System32\mmc.exe</Image>
+	  <Image>C:\Program Files\Synaptics\SynTP\SynTPEnh.exe</Image>
+	  <Image>C:\Windows\System32\wlanext.exe</Image>
+	  <Image condition="begin with">C:\Program Files\Microsoft SQL Server\</Image>
+	  <Image>C:\Windows\System32\ibtsiva.exe</Image>
+	  <Image>C:\Windows\System32\lsass.exe</Image>
+	  <Image>C:\Windows\System32\dwm.exe</Image>
+	  <Image>C:\Windows\System32\MicTray64.exe</Image>
+	  <Image>C:\Program Files\Intel\WiFi\bin\EvtEng.exe</Image>
+	  <Image>C:\Program Files\Intel\WiFi\bin\iWrap.exe</Image>
+	  <Image>C:\Program Files\Microsoft SQL Server\90\Shared\sqlwriter.exe</Image>
+	  <Image condition="begin with">C:\Program Files\WindowsApps\</Image>
+	  <Image>C:\Windows\System32\SystemSettingsBroker.exe</Image>
+	  <Image>C:\Windows\System32\smartscreen.exe</Image>
+	  <Image>C:\Windows\System32\services.exe</Image>
+	  <Image>C:\Windows\System32\CompatTelRunner.exe</Image>
+	  <Image condition="begin with">C:\Program Files\Microsoft Forefront Identity Manager\</Image>
+	  <Image>C:\Windows\System32\sihost.exe</Image>
+	  <Image>C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeClickToRun.exe</Image>
+	  <Image>C:\Windows\System32\SettingSyncHost.exe</Image>
+	  <Image>c:\windows\system32\schtasks.exe</Image>
+	  <Image>c:\windows\syswow64\schtasks.exe</Image>
+	  <Image>c:\windows\system32\svchost.exe</Image>
+	  <Image>c:\windows\syswow64\svchost.exe</Image>
+	  <Image>C:\Program Files (x86)\Kontiki\KHost.exe</Image>
+	  <Image>C:\Windows\System32\tasklist.exe</Image>
+	  <Image>C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image>
+	  <Image condition="end with">procexp64.exe</Image>
+	  <Image condition="end with">procmon.exe</Image>
+	  <Image condition="end with">procexp.exe</Image>
+	  <Image condition="end with">wmic.exe</Image>
+	  <Image condition="end with">AppData\Local\Microsoft\OneDrive\OneDrive.exe</Image>
+	  <ImageLoaded condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</ImageLoaded>
+	  <Image condition="end with">AppData\Local\Microsoft\Teams\Update.exe</Image>
+	  <Image>C:\Windows\System32\ClipRenew.exe</Image>
+	  <ImageLoaded>C:\Windows\SysWOW64\msi.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\SysWOW64\cryptbase.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\aclui.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\syswow64.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\SysWOW64\userenv.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\SysWOW64\winmm.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\winmm.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\duser.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\Syswow64\duser.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\uxtheme.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\Syswow64\uxtheme.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\dbghelp.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\Syswow64\dbghelp.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\SysWOW64\amsi.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\amsi.dll</ImageLoaded>
+	  <ImageLoaded>C:\Windows\System32\Dism\LogProvider.dll</ImageLoaded>
+	  <ImageLoaded>C:\Program Files\Windows Defender\MpClient.dll</ImageLoaded>
+	  <Signature>Opera Software AS</Signature>
+	</ImageLoad>
+</EventFiltering>
+</Sysmon>
