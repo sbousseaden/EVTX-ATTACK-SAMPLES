@@ -36,7 +36,7 @@ Can be useful for:
 20. Execution via malicious Compilted HTML file -> Sysmon_Exec_CompiledHTML.evtx	(parent_process_name = hh.exe)
 21. Execution via CPL module - Shell32.dll!Control_RunDLL (sysmon_1_11_rundll32_cpl_ostap.evtx) - Ostap JS malware
 
-## Reconnaissance:
+## Discovery:
 1. PsLoggedOn.exe traces on the destination host
 2. BloodHoundAD\SharpHound (with default scan options) traces on one target host
 3. "Domain Admins" Group enumeration - 4661 (SAM_GROUP, S-1-5-21-domain-512) - DC logs
