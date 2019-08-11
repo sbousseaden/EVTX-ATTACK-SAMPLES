@@ -25,4 +25,4 @@ Below a summarized overview of the covered TTPs using attack-navigator:
 
 # Licenses:
 
-The content of this repository is released under the ![GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html)
+The content of this repository is released under the  ![GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html)
