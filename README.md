@@ -13,7 +13,7 @@ Can be useful for:
 
 - Avoid/Bypass the noisy techniques if you are a redteamer
 
-For a detailed overview of covered attack TTPs and their mapping to MITRE ATT&CK TTPs check this spreadsheet 
+For a detailed overview of covered attack TTPs and their mapping to MITRE ATT&CK TTPs check this spreadsheet: 
 
 https://docs.google.com/spreadsheets/d/1DOehPeGlUQOsf6HRNT2tsLxNiUQS-kE0GtDE8mcbi8A/edit?usp=sharing
 
