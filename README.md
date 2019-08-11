@@ -22,3 +22,7 @@ N.B: Mapping has been done to the level of ATT&CK technique, some items are mark
 Below a summarized overview of the covered TTPs using attack-navigator:
 
 ![alt text](https://raw.githubusercontent.com/sbousseaden/EVTX-ATTACK-SAMPLES/master/mitre_evtx_repo_map.png)
+
+# Licenses:
+
+The content of this repository is released under the ![GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html)
