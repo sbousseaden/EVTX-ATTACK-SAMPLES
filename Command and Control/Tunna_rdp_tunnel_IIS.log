@@ -2,7 +2,7 @@
 #Version: 1.0
 #Date: 2019-09-03 10:04:35
 #Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
-
+# Default traces of Tunna Tunneling tool - "proxy&port=*&ip=*"
 
 2019-09-03 10:13:36 10.0.2.15 GET /erp/conn.aspx proxy&port=3389&ip=127.0.0.1 80 - 10.0.2.17 - - 200 0 0 7
 2019-09-03 10:13:44 10.0.2.15 POST /erp/conn.aspx proxy 80 - 10.0.2.17 - - 200 0 0 4
