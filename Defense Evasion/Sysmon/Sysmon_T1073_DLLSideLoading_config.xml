@@ -64,6 +64,7 @@ Credits:
       <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">iviewers.dll</ImageLoaded>
       <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">NtUserEx.dll</ImageLoaded>
       <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">RasTls.dll</ImageLoaded>
+      <ImageLoaded condition="end with" name="Defense Evasion - T1073">inicore_v2.3.30.dll</ImageLoaded> <!-- APT27 use for initial exec -->
       <!--  -->
       <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">rc.dll</ImageLoaded>
       <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">ssMUIDLL.dll</ImageLoaded>
