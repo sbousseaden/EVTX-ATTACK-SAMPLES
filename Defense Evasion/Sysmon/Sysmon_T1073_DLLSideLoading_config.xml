@@ -27,6 +27,7 @@ Credits:
 
     <ImageLoad onmatch="include">
 	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">edudll.dll</ImageLoaded>
+	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">navlu.dll</ImageLoaded>
 	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">FormDll.dll</ImageLoaded>
 	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">wwlib.dll</ImageLoaded> <!-- winword.exe -->
 	  <ImageLoaded condition="end with" name="Defense Evasion - T1073 -  DLL Side Loading">BIB.dll</ImageLoaded> <!-- Adobe A3DUtility.exe -->
