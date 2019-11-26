@@ -13,10 +13,6 @@ Can be useful for:
 
 - Avoid/Bypass the noisy techniques if you are a redteamer
 
-For a detailed overview of covered attack TTPs and their mapping to MITRE ATT&CK TTPs check this spreadsheet: 
-
-https://docs.google.com/spreadsheets/d/1DOehPeGlUQOsf6HRNT2tsLxNiUQS-kE0GtDE8mcbi8A/edit?usp=sharing
-
 N.B: Mapping has been done to the level of ATT&CK technique (not procedure), some items are marked in grey, meaning couldn't found a closer TTP that achieves same objective. 
 
 Below a summarized overview of the covered TTPs using attack-navigator:
@@ -24,4 +20,4 @@ Below a summarized overview of the covered TTPs using attack-navigator:
 ![alt text](https://raw.githubusercontent.com/sbousseaden/EVTX-ATTACK-SAMPLES/master/mitre_evtx_repo_map.png)
 
 # License:
-The content of this repository is released under the GNU General Public License.
+Usage of the content of this repository for commercial purposes (e.g. tools, paid trainings, paid labs etc.) is not authorized prior formal written consent from the repository's owner.
