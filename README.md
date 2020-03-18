@@ -15,7 +15,7 @@ Can be useful for:
 
 N.B: Mapping has been done to the level of ATT&CK technique (not procedure), some items are marked in grey, meaning couldn't found a closer TTP that achieves same objective. 
 
-Details of the EVTX content mapped to MITRE tactics can be found here ![here](http://bit.ly/2WpzQM4)
+Details of the EVTX content mapped to MITRE tactics can be found [here](http://bit.ly/2WpzQM4)
 
 Below a summarized overview of the covered TTPs using attack-navigator:
 
