@@ -15,11 +15,13 @@ Can be useful for:
 
 N.B: Mapping has been done to the level of ATT&CK technique (not procedure), some items are marked in grey, meaning couldn't found a closer TTP that achieves same objective. 
 
-Details of the EVTX content mapped to MITRE tactics can be found [here](http://bit.ly/2WpzQM4), below a stats summary:
+Details of the EVTX content mapped to MITRE tactics can be found [here](http://bit.ly/2WpzQM4), stats summary:
 
 ![alt text](https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES/raw/master/EVTX_DataSet_Stats.PNG)
 
-Below a summarized overview of the covered TTPs using attack-navigator:
+![alt text](https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES/raw/master/HeatMap.PNG)
+
+Overview of the covered TTPs using attack-navigator:
 
 ![alt text](https://raw.githubusercontent.com/sbousseaden/EVTX-ATTACK-SAMPLES/master/mitre_evtx_repo_map.png)
 
