@@ -1,4 +1,4 @@
-# Windows EVTX Samples [More than 200 EVTX examples]:
+# Windows EVTX Samples [200 EVTX examples]:
 
 ![alt text](https://raw.githubusercontent.com/sbousseaden/EVTX-ATTACK-SAMPLES/master/AIEvent.jpg)
 
