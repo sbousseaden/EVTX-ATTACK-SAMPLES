@@ -14,6 +14,9 @@ Remove this file to replay already read files.
 Author: Grant Sales
 Date: 2012.08.13
 
+.PARAMETER Source
+Path to recurse read through to find EVTX files.
+
 .PARAMETER Exe
 Path to the winlogbeat.exe binary, when not provided, will look in $path.
 
@@ -27,6 +30,9 @@ Test winlogbeat config and exit, will only run a max of 10 times within the loop
 .\Winlogbeat-Bulk-Read.ps1
 
 .EXAMPLE
+.\Winlogbeat-Bulk-Read.ps1 -Exe $env:USERPROFILE\Downloads\winlogbeat\winlogbeat-7.8.1-windows-x86_64\winlogbeat.exe -Source "..\EVTX-ATTACK-SAMPLES\"
+
+.EXAMPLE
 .\Winlogbeat-Bulk-Read.ps1 -Exe $env:USERPROFILE\Downloads\winlogbeat\winlogbeat-7.8.1-windows-x86_64\winlogbeat.exe
 
 .EXAMPLE
@@ -37,6 +43,7 @@ Test winlogbeat config and exit, will only run a max of 10 times within the loop
 #>
 
 param(
+  [string]$Source = "$PSScriptRoot",
   [string]$Exe,
   [switch]$Append,
   [switch]$Test,
@@ -82,9 +89,14 @@ else {
 }
 
 ## Get input evtx files
-$evtx_files = Get-ChildItem -Path ./ -Filter "*.evtx" -Recurse
+Write-Host "Source: $Source"
+$evtx_files = Get-ChildItem -Path $Source -Filter "*.evtx" -Recurse
 
 $evtx_count = $evtx_files.count
+
+if ($evtx_count -eq 0){
+  Write-Error -Message "No EVTX files found at $Source" -ErrorAction Stop
+}
 
 #Write-Host "Processing $evtx_count evtx files."
 $i=0
