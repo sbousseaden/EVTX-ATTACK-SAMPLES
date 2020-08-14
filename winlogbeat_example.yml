@@ -1,0 +1,28 @@
+#.\winlogbeat.exe -e -c .\winlogbeat-evtx.yml -E EVTX_FILE=c:\backup\Security-2019.01.evtx
+
+winlogbeat.event_logs:
+  - name: ${EVTX_FILE} 
+    no_more_events: stop 
+
+winlogbeat.shutdown_timeout: 1s 
+winlogbeat.registry_file: "${CWD}/winlogbeat/evtx-registry.yml"
+
+#output.elasticsearch.hosts: ['http://localhost:9200']
+#output.logstash.hosts: ['http://localhost:5044']
+
+output.file:
+  #enabled: false
+  path: "${CWD}/winlogbeat"
+  filename: events.json
+  number_of_files: 2
+
+#output.kafka:
+#  enabled: false
+#  hosts: ["kafka1:9092", "kafka2:9092", "kafka3:9092"]
+#  topic: 'kafka_topic'
+
+logging.to_files: false
+logging.files:
+  path: "${CWD}/winlogbeat"
+  name: winlogbeat
+  keepfiles: 2
