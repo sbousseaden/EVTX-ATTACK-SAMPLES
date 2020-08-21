@@ -27,13 +27,9 @@ Overview of the covered TTPs using attack-navigator:
 
 # EVTX Replay
 Included is a PowerShell script that can loop through and parse evtx files with [winlogbeat](https://www.elastic.co/downloads/beats/winlogbeat). 
-
 This can be useful to replay logs into an ELK stack or to a local file. By default this script will
-
 output logs to .\winlogbeat\events.json as configured in the winlogbeat_example.yml file, 
-
 you can configure any of your own destinations in winlogbeat.yml (excluded from git) and the
-
 example config file will be ignored if winlogbeat.yml is found.
 
 EVTX Replay Usage:
