@@ -12,7 +12,7 @@ store the file path in winlogbeat.registry_file to prevent reading the same logs
 Remove this file to replay already read files.
 
 Author: Grant Sales
-Date: 2012.08.13
+Date: 2020.08.20
 
 .PARAMETER Source
 Path to recurse read through to find EVTX files.
@@ -25,6 +25,15 @@ When using the example config, will also output events to bulk_events.json.
 
 .PARAMETER Test
 Test winlogbeat config and exit, will only run a max of 10 times within the loop.
+
+.PARAMETER Reset
+Reset flag will delete the registry file allowing replay of evtx files that have
+already been read once. By default, winlogbeat will read all the files but will not
+generate output from an already read file due to bookmarks set in the registry file.
+
+.PARAMETER Verbose
+Verbose output, this will output file names as they are read and could help in 
+finding any possible errors.
 
 .EXAMPLE
 .\Winlogbeat-Bulk-Read.ps1
@@ -39,6 +48,9 @@ Test winlogbeat config and exit, will only run a max of 10 times within the loop
 .\Winlogbeat-Bulk-Read.ps1 -Exe $env:USERPROFILE\Downloads\winlogbeat\winlogbeat-7.8.1-windows-x86_64\winlogbeat.exe -Append
 
 .EXAMPLE
+.\Winlogbeat-Bulk-Read.ps1 -Exe "C:\Program Files\winlogbeat\winlogbeat.exe" -Reset -Verbose
+
+.EXAMPLE
 .\Winlogbeat-Bulk-Read.ps1 -Help
 #>
 
@@ -47,6 +59,8 @@ param(
   [string]$Exe,
   [switch]$Append,
   [switch]$Test,
+  [switch]$Reset,
+  [switch]$Verbose,
   [switch]$Help
 )
 
@@ -77,6 +91,16 @@ Write-Host "Using $Exe"
 $winlogbeat_config = "$PSScriptRoot\winlogbeat.yml"
 $winlogbeat_example_config = "$PSScriptRoot\winlogbeat_example.yml"
 
+$winlogbeat_log = "$PSScriptRoot\winlogbeat\log"
+if (!(Test-Path -Path "$PSScriptRoot\winlogbeat")) {
+  New-Item -Path "$PSScriptRoot\winlogbeat" -ItemType Directory
+}
+else {
+  if ($Reset -and (Test-Path -Path "$PSScriptRoot\winlogbeat\evtx-registry.yml")) {
+    Remove-Item -Path "$PSScriptRoot\winlogbeat\evtx-registry.yml"
+  }
+}
+
 if (Test-Path -Path $winlogbeat_config) {
   ## Use custom config
   Write-Host "Using config: $winlogbeat_config."
@@ -103,14 +127,17 @@ $i=0
 
 foreach ($evtx in $evtx_files) {
   #.\winlogbeat.exe -e -c .\winlogbeat-evtx.yml -E EVTX_FILE=c:\backup\Security-2019.01.evtx
-
-  Write-Progress -Id 1 -Activity "Reading EVTX files" -Status "Reading $i/$evtx_count" -PercentComplete (($i / $evtx_count) * 100)
   $evtx_path = $evtx.FullName
+  if ($Verbose) {
+    Write-Host "Reading $evtx_path"
+  }
+  Write-Progress -Id 1 -Activity "Reading $evtx_count EVTX files" -Status "Reading $evtx_path" -PercentComplete (($i / $evtx_count) * 100)
+
   if ($Test){
-    & $Exe test config -c $config -E "CWD=$PSScriptRoot" -E "EVTX_FILE=$evtx_path"
+    & $Exe test config -c $config -e --path.data "$PSScriptRoot\winlogbeat" -E "CWD=$PSScriptRoot" -E "EVTX_FILE=$evtx_path"
   }
   else {
-     & $Exe -c $config -E "CWD=$PSScriptRoot" -E "EVTX_FILE=$evtx_path"
+    & $Exe -c $config -e --path.data "$PSScriptRoot\winlogbeat" -E "CWD=$PSScriptRoot" -E "EVTX_FILE=$evtx_path" 2>&1 >> "$winlogbeat_log"
   }
 
   if ($Test){
