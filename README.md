@@ -25,8 +25,8 @@ Overview of the covered TTPs using attack-navigator:
 
 ![alt text](https://raw.githubusercontent.com/sbousseaden/EVTX-ATTACK-SAMPLES/master/mitre_evtx_repo_map.png)
 
-# EVTX Replay
-Included is a PowerShell script that can loop through and parse evtx files with [winlogbeat](https://www.elastic.co/downloads/beats/winlogbeat). 
+# Winlogbeat-Bulk-Read
+Included is a PowerShell script that can loop through, parse, and replay evtx files with [winlogbeat](https://www.elastic.co/downloads/beats/winlogbeat). 
 This can be useful to replay logs into an ELK stack or to a local file. By default this script will
 output logs to .\winlogbeat\events.json as configured in the winlogbeat_example.yml file, 
 you can configure any of your own destinations in winlogbeat.yml (excluded from git) and the
