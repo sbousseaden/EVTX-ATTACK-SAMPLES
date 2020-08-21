@@ -32,7 +32,7 @@ output logs to .\winlogbeat\events.json as configured in the winlogbeat_example.
 you can configure any of your own destinations in winlogbeat.yml (excluded from git) and the
 example config file will be ignored if winlogbeat.yml is found.
 
-EVTX Replay Usage:
+Winlogbeat-Bulk-Read Usage:
 ```
 ## Display help along with examples:
 .\Winlogbeat-Bulk-Read.ps1 -Help
