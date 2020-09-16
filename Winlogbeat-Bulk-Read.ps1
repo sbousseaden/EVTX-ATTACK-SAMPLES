@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 PowerShell loop to read local .evtx files into Elastic's winlogbeat agent.
 
@@ -19,6 +19,10 @@ Path to recurse read through to find EVTX files.
 
 .PARAMETER Exe
 Path to the winlogbeat.exe binary, when not provided, will look in $path.
+
+.PARAMETER Config
+Path to custom winlogbeat configuration. Useful if you have multiple configuration files
+used in testing.
 
 .PARAMETER Append
 When using the example config, will also output events to bulk_events.json.
@@ -45,6 +49,9 @@ finding any possible errors.
 .\Winlogbeat-Bulk-Read.ps1 -Exe $env:USERPROFILE\Downloads\winlogbeat\winlogbeat-7.8.1-windows-x86_64\winlogbeat.exe
 
 .EXAMPLE
+.\Winlogbeat-Bulk-Read.ps1 -Exe $env:USERPROFILE\Downloads\winlogbeat\winlogbeat-7.8.1-windows-x86_64\winlogbeat.exe -Source "..\EVTX-ATTACK-SAMPLES\" -Config "C:\Dev\winlogbeat-customconfig.yml"
+
+.EXAMPLE
 .\Winlogbeat-Bulk-Read.ps1 -Exe $env:USERPROFILE\Downloads\winlogbeat\winlogbeat-7.8.1-windows-x86_64\winlogbeat.exe -Append
 
 .EXAMPLE
@@ -57,6 +64,7 @@ finding any possible errors.
 param(
   [string]$Source = "$PSScriptRoot",
   [string]$Exe,
+  [string]$Config = "$PSScriptRoot\winlogbeat.yml",
   [switch]$Append,
   [switch]$Test,
   [switch]$Reset,
@@ -88,7 +96,6 @@ Write-Host "Using $Exe"
 
 ## winlogbeat.yml is ignored in .gitignore
 
-$winlogbeat_config = "$PSScriptRoot\winlogbeat.yml"
 $winlogbeat_example_config = "$PSScriptRoot\winlogbeat_example.yml"
 
 $winlogbeat_log = "$PSScriptRoot\winlogbeat\log"
@@ -101,15 +108,14 @@ else {
   }
 }
 
-if (Test-Path -Path $winlogbeat_config) {
+if (Test-Path -Path $Config) {
   ## Use custom config
-  Write-Host "Using config: $winlogbeat_config."
-  $config = $winlogbeat_config
+  Write-Host "Using config: $Config."
 }
 else {
   Write-Host "Using example config: $winlogbeat_example_config."
   $example_config = $true
-  $config = $winlogbeat_example_config
+  $Config = $winlogbeat_example_config
 }
 
 ## Get input evtx files
@@ -134,10 +140,10 @@ foreach ($evtx in $evtx_files) {
   Write-Progress -Id 1 -Activity "Reading $evtx_count EVTX files" -Status "Reading $evtx_path" -PercentComplete (($i / $evtx_count) * 100)
 
   if ($Test){
-    & $Exe test config -c $config -e --path.data "$PSScriptRoot\winlogbeat" -E "CWD=$PSScriptRoot" -E "EVTX_FILE=$evtx_path"
+    & $Exe test config -c $Config -e --path.data "$PSScriptRoot\winlogbeat" -E "CWD=$PSScriptRoot" -E "EVTX_FILE=$evtx_path"
   }
   else {
-    & $Exe -c $config -e --path.data "$PSScriptRoot\winlogbeat" -E "CWD=$PSScriptRoot" -E "EVTX_FILE=$evtx_path" 2>&1 >> "$winlogbeat_log"
+    & $Exe -c $Config -e --path.data "$PSScriptRoot\winlogbeat" -E "CWD=$PSScriptRoot" -E "EVTX_FILE=$evtx_path" 2>&1 >> "$winlogbeat_log"
   }
 
   if ($Test){
