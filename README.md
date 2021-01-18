@@ -45,4 +45,5 @@ Winlogbeat-Bulk-Read Usage:
 ```
 
 # License:
-Usage of the content of this repository for commercial purposes (e.g. tools, paid trainings, paid labs etc.) is not authorized prior formal written consent from the repository's owner.
+
+EVTX_ATT&CK's [GNU General Public License](https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES/blob/master/LICENSE.GPL)
