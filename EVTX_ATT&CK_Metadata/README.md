@@ -8,14 +8,14 @@ The project EVTX-ATTACK-SAMPLES can be used not only to detect and replay attack
 - To provide more insights about telemtry decisiveness over the detection of specific tactics & techniques.
 
 ## Examples
-- Top tactics by number of events:
+- Top tactics by number of events:  
 ![](./image_bar.png)
 
-- Top 10 Tactics by EventIDs and Event Log Providers:
+- Top 10 Tactics by EventIDs and Event Log Providers:  
 ![](./image_pie.png)
 
-- Top 30 RelativeTargetName of EventID 5145 by ShareName:
+- Top 30 RelativeTargetName of EventID 5145 by ShareName:  
 ![](./image_barh.png)
 
-- Generating Sankey visualisations:
+- Generating Sankey visualisations:  
 ![](./sankey.png)
