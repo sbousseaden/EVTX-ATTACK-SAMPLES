@@ -19,3 +19,13 @@ The project EVTX-ATTACK-SAMPLES can be used not only to detect and replay attack
 
 - Generating Sankey visualisations:  
 ![](./sankey.png)
+
+## Required packages
+The following packages would be used
+- pandas
+- lxlm
+- hexdump
+- six
+- matplotlib
+- plotly
+- chart_studio
